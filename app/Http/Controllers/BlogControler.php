@@ -109,6 +109,10 @@ class BlogControler extends Controller
 
         return redirect()->route('blog.index')->with(['success'=> 'data dihapus']);
 
-    }    
+    }   
+    function test (){
+        $data = blogs::all();
+        return json_encode($data);
+    } 
     
 }
